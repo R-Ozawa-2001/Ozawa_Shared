@@ -67,6 +67,7 @@ print(todate.strftime("%Y/%m/%d"))
 
 ### pathlib
 ```python {cmd}
+# -*- coding: utf-8 -*-
 import pprint
 from pathlib import Path
 p_dir = Path(".")
@@ -74,7 +75,12 @@ print(p_dir)
 print(p_dir.is_file())
 print(p_dir.is_dir())
 print(p_dir.exists())
-print(list(p_dir.iterdir()))
+# print(list(p_dir.iterdir()))
+
+joinedPath = p_dir / "newDir"
+joinedPath.mkdir(exist_ok = False)
+joinedPath = joinedPath / "test.txt"
+joinedPath.touch()
 # pprint.pprint(list(p_dir.iterdir()))
 newFile = Path("./new.txt")
 newFile.touch()
