@@ -84,9 +84,33 @@ joinedPath.touch()
 # pprint.pprint(list(p_dir.iterdir()))
 newFile = Path("./new.txt")
 newFile.touch()
-
-
-
 ```
 
+### for
 
+```python {cmd}
+
+# 定数の宣言
+List = ["a","b","c"]
+range_List = list(range(5))
+
+print(List[0])
+List.append("d")
+print(List)
+List[0] = "E"
+print(List)
+print(range_List)
+
+for i in range(5):
+  print(i)
+```
+
+### def
+
+```python {cmd}
+
+def test(a):
+  print(a)
+
+test(5)
+```
